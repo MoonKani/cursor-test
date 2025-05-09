@@ -1102,3 +1102,206 @@ main {
   border-color: #ffd700;
   box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
 }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .App-header h1 {
+    font-size: 1.5em;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .content h2 {
+    font-size: 1.2em;
+  }
+
+  .combat-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .combat-main {
+    width: 100%;
+  }
+
+  .combat-skills {
+    width: 100%;
+  }
+
+  .shop-section {
+    width: 100%;
+  }
+
+  .inventory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .inventory-item {
+    font-size: 0.6em;
+    padding: 6px;
+  }
+
+  .sell-button {
+    font-size: 0.6em;
+    padding: 6px 12px;
+  }
+
+  .weapons-grid {
+    max-height: 300px;
+  }
+
+  .weapon-card {
+    padding: 10px;
+  }
+
+  .weapon-card h4 {
+    font-size: 0.8em;
+  }
+
+  .weapon-card p {
+    font-size: 0.6em;
+  }
+
+  .attack-button {
+    padding: 12px 30px;
+    font-size: 1em;
+  }
+
+  .idle-button {
+    padding: 10px 20px;
+    font-size: 0.7em;
+  }
+
+  .enemy {
+    width: 150px;
+    height: 150px;
+  }
+
+  .enemy-sprite {
+    width: 96px;
+    height: 96px;
+  }
+
+  .enemy-health {
+    height: 15px;
+  }
+
+  .enemy-health span {
+    font-size: 0.6em;
+  }
+
+  .kill-counter,
+  .gold-counter,
+  .boss-counter,
+  .boss-warning {
+    font-size: 0.7em;
+    padding: 8px 15px;
+  }
+
+  .tooltip {
+    width: 150px;
+    font-size: 0.6em;
+  }
+
+  .music-toggle {
+    width: 35px;
+    height: 35px;
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App-header h1 {
+    font-size: 1.2em;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .inventory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enemy {
+    width: 120px;
+    height: 120px;
+  }
+
+  .enemy-sprite {
+    width: 80px;
+    height: 80px;
+  }
+
+  .attack-button {
+    padding: 10px 25px;
+    font-size: 0.9em;
+  }
+
+  .idle-button {
+    padding: 8px 16px;
+    font-size: 0.6em;
+  }
+
+  .modal {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modal h2 {
+    font-size: 1em;
+  }
+
+  .modal input {
+    font-size: 0.7em;
+    padding: 8px;
+  }
+
+  .submit-button {
+    font-size: 0.7em;
+    padding: 8px;
+  }
+
+  .combat-skill-card {
+    margin-bottom: 10px;
+  }
+
+  .combat-skill-name {
+    font-size: 0.7em;
+  }
+
+  .combat-skill-level {
+    font-size: 0.6em;
+  }
+
+  .combat-xp-bar-container {
+    height: 10px;
+  }
+
+  .combat-xp-text {
+    font-size: 0.5em;
+  }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+  .App {
+    min-height: -webkit-fill-available;
+  }
+}
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Improve touch targets */
+button, 
+input, 
+.inventory-item,
+.weapon-card {
+  touch-action: manipulation;
+}
